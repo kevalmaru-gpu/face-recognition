@@ -1,0 +1,42 @@
+.fp-main{
+    width: 100vw;
+    height: 100vh;
+}
+.fp-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: min(70vw, 250px); 
+    height: min(60vh, 400px); 
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    margin-top:40px;
+}
+.fp-button{
+    margin-top: 20px;
+}
+.fp-box button{
+    margin-top: 30px;
+}
+.div-line{
+    margin-top: 35px;
+    width: min(70vw, 200px); 
+    border-top: solid black 1px;
+}
+.fp-page-links{
+    width: min(70vw, 250px); 
+    height: min(80vh, 500px); 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 35px;
+    margin-left: 75px;
+}
+.fp-page-links a{
+    color: #14213d;
+    margin-top: 10px;
+    font-size: 10px;
+}

@@ -1,0 +1,9 @@
+.hf-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hf-main .input-field{
+    margin-top: 40px;
+}
