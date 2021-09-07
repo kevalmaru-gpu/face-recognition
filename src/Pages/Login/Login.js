@@ -1,7 +1,7 @@
 import React from "react";
 import './Login.css'
 
-const Login = ({onRouteChange}) => {
+const Login = ({onMasterRouteChange}) => {
     return(
         <div className='login-main main-container'>
             <div className='login-box box-container'>
@@ -13,8 +13,8 @@ const Login = ({onRouteChange}) => {
                 <button className='login-button'>Login</button>
                 <div className='div-line'></div>
                 <div className='login-page-links'>
-                    <a href='#' onClick={()=>onRouteChange('forgotPass')}>Forgot password ?</a>
-                    <a href='#' onClick={()=>onRouteChange('register')}>New user ?</a>
+                    <a href='#' onClick={()=>onMasterRouteChange('forgotPass')}>Forgot password ?</a>
+                    <a href='#' onClick={()=>onMasterRouteChange('register')}>New user ?</a>
                 </div>
             </div>
         </div>
