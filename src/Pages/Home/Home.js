@@ -17,11 +17,11 @@ class Home extends React.Component{
     }
 
     render(){
-        const { changeMasterRoute } = this.props
+        const { onMasterRouteChange } = this.props
 
         return(
             <div className='home-main'>
-                <Navigation changeRoute={this.changeRoute} changeMasterRoute={changeMasterRoute}/>
+                <Navigation changeRoute={this.changeRoute} onMasterRouteChange={onMasterRouteChange}/>
                 {
                     this.state.route === 'form'
                     ?

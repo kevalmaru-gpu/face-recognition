@@ -13,7 +13,7 @@ class App extends React.Component{
     }
   }
 
-  onRouteChange = (route) => {
+  onMasterRouteChange = (route) => {
     this.setState({route:route})
   }
 
@@ -23,20 +23,20 @@ class App extends React.Component{
         {
           this.state.route === 'login'
           ?
-            <Login onRouteChange={this.onRouteChange}/>
+            <Login onMasterRouteChange={this.onMasterRouteChange}/>
           :
           this.state.route === 'register'
           ?
-            <Register onRouteChange={this.onRouteChange}/>
+            <Register onMasterRouteChange={this.onMasterRouteChange}/>
           :
           this.state.route === 'forgotPass'
           ?
-            <ForgotPass onRouteChange={this.onRouteChange}/>
+            <ForgotPass onMasterRouteChange={this.onMasterRouteChange}/>
           :
           this.state.route === 'home'?
-            <Home onRouteChange={this.onRouteChange}/>
+            <Home onMasterRouteChange={this.onMasterRouteChange}/>
           :
-            <Login onRouteChange={this.onRouteChange}/>
+            <Login onMasterRouteChange={this.onMasterRouteChange}/>
         }
       </div>
     );

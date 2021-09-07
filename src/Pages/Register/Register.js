@@ -1,7 +1,7 @@
 import React from "react"
 import './Register.css'
 
-const Register = ({onRouteChange}) => {
+const Register = ({onMasterRouteChange}) => {
     return(
         <div className='reg-main main-container'>
             <div className='reg-box box-container'>
@@ -14,7 +14,7 @@ const Register = ({onRouteChange}) => {
                 <button className='reg-button'>Register</button>
                 <div className='div-line'></div>
                 <div className='reg-page-links'>
-                    <a href='#' onClick={()=>onRouteChange('login')}>already have an account ?</a>
+                    <a href='#' onClick={()=>onMasterRouteChange('login')}>already have an account ?</a>
                 </div>
             </div>
         </div>

@@ -20,7 +20,7 @@ class Navigation extends React.Component{
     }
 
     render(){
-        const { changeRoute, changeMasterRoute} = this.props
+        const { changeRoute, onMasterRouteChange} = this.props
 
         return(
             <div className='home-nav'>
@@ -35,7 +35,7 @@ class Navigation extends React.Component{
                         <ul>
                             <li><a href='#' onClick={() => changeRoute('desc')}>Description</a></li>
                             <li><a href='#' onClick={() => changeRoute('form')}>Face Recognition</a></li>
-                            <li><a href='#' onClick={() => changeMasterRoute('login')}>Sign out</a></li>
+                            <li><a href='#' onClick={() => onMasterRouteChange('login')}>Sign out</a></li>
                         </ul>
                     </div>
                 </nav>
