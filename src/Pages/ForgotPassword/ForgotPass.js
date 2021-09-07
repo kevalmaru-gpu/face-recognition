@@ -1,7 +1,7 @@
 import React from "react";
 import './ForgotPass.css'
 
-const ForgotPass = ({onRouteChange}) => {
+const ForgotPass = ({onMasterRouteChange}) => {
     return(
         <div className='fp-main main-container'>
             <div className='fp-box box-container'>
@@ -11,7 +11,7 @@ const ForgotPass = ({onRouteChange}) => {
                 <button className='fp-button'>Find</button>
                 <div className='div-line'></div>
                 <div className='fp-page-links'>
-                    <a href='#' onClick={ ()=>onRouteChange('login') }>back to login</a>
+                    <a href='#' onClick={ ()=>onMasterRouteChange('login') }>back to login</a>
                 </div>
             </div>
         </div>
