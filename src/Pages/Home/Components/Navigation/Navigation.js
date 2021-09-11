@@ -14,9 +14,10 @@ class Navigation extends React.Component{
 
     toggleMenu = () =>{
         const navBarLinks = document.getElementsByClassName("navbar-links")[0]
-        console.log(navBarLinks)
+        const navBar = document.getElementsByTagName("nav")[0]
 
         navBarLinks.classList.toggle('active')
+        navBar.classList.toggle('active')
     }
 
     render(){
