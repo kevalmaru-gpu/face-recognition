@@ -35,13 +35,14 @@ class App extends React.Component{
     const height = Number(inputImage.height)
 
     return{
-      leftCol: faceData.left_col * width,
-      topRow: faceData.top_row * height,
-      rightCol: width - (faceData.right_col * width),
-      bottomRow: height - (faceData.bottom_row * height)
+      leftCol: (faceData.left_col * width + 10) + 10,
+      topRow: (faceData.top_row * height) - 10,
+      rightCol: (width - (faceData.right_col * width)) + 10,
+      bottomRow: (height - (faceData.bottom_row * height)) - 10
     }
   }
   displayFaceBox = (boxData) => {
+    console.log(boxData)
     this.setState({box:boxData})
   }
 
