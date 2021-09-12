@@ -4,17 +4,51 @@ import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import ForgotPass from './Pages/ForgotPassword/ForgotPass';
 import Home from './Pages/Home/Home';
+import Clarifai from 'clarifai'
+
+const app = new Clarifai.App({
+  apiKey: "43c8acfc16d44abd8913ceb2884e0422"
+})
 
 class App extends React.Component{
   constructor(prop){
     super(prop)
     this.state = {
-      route: 'home'
+      route: 'home',
+      imageLink: '',
+      box: {}
     }
   }
 
   onMasterRouteChange = (route) => {
     this.setState({route:route})
+  }
+
+  onImageLinkChange = (event) => {
+    this.setState({imageLink:event.target.value})
+  }
+
+  calculateFaceData = (data) => {
+    const faceData = data.outputs[0].data.regions[0].region_info.bounding_box
+    const inputImage = document.getElementById('inputImage')
+    const width = Number(inputImage.width)
+    const height = Number(inputImage.height)
+
+    return{
+      leftCol: faceData.left_col * width,
+      topRow: faceData.top_row * height,
+      rightCol: faceData.right_col * width,
+      bottomRow: faceData.bottom_row * height
+    }
+  }
+  displayFaceBox = (boxData) => {
+    this.setState({box:boxData})
+  }
+
+  onFindButton = () => {
+    app.models.predict("a403429f2ddf4b49b307e318f00e528b",this.state.imageLink)
+    .then(res => this.displayFaceBox(this.calculateFaceData(res)))
+    .catch(err => alert(err))
   }
 
   render(){
@@ -34,7 +68,7 @@ class App extends React.Component{
             <ForgotPass onMasterRouteChange={this.onMasterRouteChange}/>
           :
           this.state.route === 'home'?
-            <Home onMasterRouteChange={this.onMasterRouteChange}/>
+            <Home onMasterRouteChange={this.onMasterRouteChange} onFindButton={this.onFindButton} onImageLinkChange={this.onImageLinkChange} imageLink={this.state.imageLink} box={this.state.box}/>
           :
             <Login onMasterRouteChange={this.onMasterRouteChange}/>
         }

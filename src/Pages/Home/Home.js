@@ -3,6 +3,7 @@ import './Home.css'
 import Navigation from './Components/Navigation/Navigation'
 import Description from "./Components/Description/Description";
 import HomeForm from "./Components/HomeForm/HomeForm";
+import LinkImage from "./Components/LinkImage/LinkImage";
 
 class Home extends React.Component{
     constructor(prop){
@@ -17,7 +18,7 @@ class Home extends React.Component{
     }
 
     render(){
-        const { onMasterRouteChange } = this.props
+        const { onMasterRouteChange, onFindButton, onImageLinkChange, imageLink, box} = this.props
 
         return(
             <div className='home-main'>
@@ -25,7 +26,10 @@ class Home extends React.Component{
                 {
                     this.state.route === 'form'
                     ?
-                        <HomeForm/>
+                        <div>
+                            <HomeForm onFindButton={onFindButton} onImageLinkChange={onImageLinkChange}/>
+                            <LinkImage imageLink={imageLink} box={box}/>
+                        </div>
                     :
                     this.state.route === 'desc'
                     ?

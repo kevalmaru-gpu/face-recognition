@@ -1,17 +1,7 @@
 import React from "react";
 import './Navigation.css'
 
-const Clarifai = require('clarifai');
-
-const app = new Clarifai.App({
- apiKey: '43c8acfc16d44abd8913ceb2884e0422'
-});
-
 class Navigation extends React.Component{
-    constructor(prop){
-        super(prop)
-    }
-
     toggleMenu = () =>{
         const navBarLinks = document.getElementsByClassName("navbar-links")[0]
         const navBar = document.getElementsByTagName("nav")[0]

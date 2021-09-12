@@ -1,0 +1,28 @@
+.image-container{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-child-container{
+    height: min(500px,70%);
+    position: absolute;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: min(500px,70%);
+    height: min(500px,70%);
+    border-radius: 10px;
+    object-fit: cover;
+}
+.bounding-box{
+    position: absolute;
+    box-shadow: 0px 0px 0px 3px blue inset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+}
