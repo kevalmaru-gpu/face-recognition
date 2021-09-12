@@ -37,8 +37,8 @@ class App extends React.Component{
     return{
       leftCol: faceData.left_col * width,
       topRow: faceData.top_row * height,
-      rightCol: faceData.right_col * width,
-      bottomRow: faceData.bottom_row * height
+      rightCol: width - (faceData.right_col * width),
+      bottomRow: height - (faceData.bottom_row * height)
     }
   }
   displayFaceBox = (boxData) => {

@@ -1,13 +1,13 @@
 .image-container{
+
     margin-top: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .image-child-container{
-    height: min(500px,70%);
     position: absolute;
-    margin-top: 15%;
+    margin-top: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
