@@ -10,7 +10,7 @@ const Login = ({onMasterRouteChange}) => {
                     <input type='tex' placeholder='Username' className='input-field'></input>
                     <input type='password' placeholder='Password' className='input-field'></input>
                 </div>
-                <button className='login-button'>Login</button>
+                <button className='login-button' onClick={() => onMasterRouteChange('home')}>Login</button>
                 <div className='div-line'></div>
                 <div className='login-page-links'>
                     <a href='#' onClick={()=>onMasterRouteChange('forgotPass')}>Forgot password ?</a>

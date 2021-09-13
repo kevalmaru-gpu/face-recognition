@@ -11,7 +11,7 @@ const Register = ({onMasterRouteChange}) => {
                     <input type='tex' placeholder='Username' className='input-field'></input>
                     <input type='password' placeholder='Password' className='input-field'></input>
                 </div>
-                <button className='reg-button'>Register</button>
+                <button className='reg-button' onClick={() => onMasterRouteChange('login')}>Register</button>
                 <div className='div-line'></div>
                 <div className='reg-page-links'>
                     <a href='#' onClick={()=>onMasterRouteChange('login')}>already have an account ?</a>

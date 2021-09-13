@@ -1,22 +1,20 @@
 .image-container{
-
-    margin-top: 5%;
+    margin-top: min(200px,30%);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .image-child-container{
     position: absolute;
-    margin-top: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 img{
-    width: min(500px,70%);
-    height: min(500px,70%);
+    width: min(500px,50vw);
+    height: min(300px,50vw);
     border-radius: 10px;
-    object-fit: cover;
+    object-fit: contain;
 }
 .bounding-box{
     position: absolute;

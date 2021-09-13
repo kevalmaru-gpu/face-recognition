@@ -14,13 +14,19 @@ class App extends React.Component{
   constructor(prop){
     super(prop)
     this.state = {
-      route: 'home',
+      route: 'login',
       imageLink: '',
       box: {}
     }
   }
 
   onMasterRouteChange = (route) => {
+    if (route === 'login'){
+      console.log('its login')
+    }
+    else if(route === 'register'){
+      console.log('its register');
+    }
     this.setState({route:route})
   }
 
@@ -35,10 +41,10 @@ class App extends React.Component{
     const height = Number(inputImage.height)
 
     return{
-      leftCol: (faceData.left_col * width + 10) + 10,
+      leftCol: (faceData.left_col * width + 10),
       topRow: (faceData.top_row * height) - 10,
-      rightCol: (width - (faceData.right_col * width)) + 10,
-      bottomRow: (height - (faceData.bottom_row * height)) - 10
+      rightCol: (width - (faceData.right_col * width)),
+      bottomRow: (height - (faceData.bottom_row * height))
     }
   }
   displayFaceBox = (boxData) => {
