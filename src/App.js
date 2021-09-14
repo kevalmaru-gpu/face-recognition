@@ -20,13 +20,13 @@ class App extends React.Component{
     }
   }
 
+  componentDidMount(){
+    fetch("http://localhost:200/")
+    .then(res => res.json())
+    .then(data => console.log(data))
+  }
+
   onMasterRouteChange = (route) => {
-    if (route === 'login'){
-      console.log('its login')
-    }
-    else if(route === 'register'){
-      console.log('its register');
-    }
     this.setState({route:route})
   }
 
