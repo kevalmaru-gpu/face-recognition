@@ -16,14 +16,8 @@ class App extends React.Component{
     this.state = {
       route: 'login',
       imageLink: '',
-      box: {}
+      box: {},
     }
-  }
-
-  componentDidMount(){
-    fetch("http://localhost:200/")
-    .then(res => res.json())
-    .then(data => console.log(data))
   }
 
   onMasterRouteChange = (route) => {

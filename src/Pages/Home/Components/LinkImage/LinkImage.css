@@ -14,7 +14,7 @@ img{
     width: min(500px,50vw);
     height: min(300px,50vw);
     border-radius: 10px;
-    object-fit: contain;
+    object-fit: cover;
 }
 .bounding-box{
     position: absolute;
