@@ -57,7 +57,7 @@ class Register extends React.Component{
                 <button className='reg-button' onClick={this.onSubmit}>Register</button>
                 <div className='div-line'></div>
                 <div className='reg-page-links'>
-                    <a href='/#' onClick={()=>onMasterRouteChange('login')}>already have an account ?</a>
+                    <a onClick={()=>onMasterRouteChange('login')}>already have an account ?</a>
                 </div>
             </div>
         </div>

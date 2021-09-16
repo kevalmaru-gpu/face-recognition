@@ -11,7 +11,7 @@ const ForgotPass = ({onMasterRouteChange}) => {
                 <button className='fp-button'>Find</button>
                 <div className='div-line'></div>
                 <div className='fp-page-links'>
-                    <a href='/#' onClick={ ()=>onMasterRouteChange('login') }>back to login</a>
+                    <a onClick={ ()=>onMasterRouteChange('login') }>back to login</a>
                 </div>
             </div>
         </div>

@@ -44,3 +44,9 @@ button:hover{
 button:active{
   transform: rotate(10deg);
 }
+a{
+    color: #14213d;
+    margin-top: 10px;
+    font-size: .7rem;
+    cursor: pointer;
+}
