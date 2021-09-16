@@ -51,8 +51,8 @@ class Login extends React.Component {
                 <button className='login-button' onClick={this.onSubmit}>Login</button>
                 <div className='div-line'></div>
                 <div className='login-page-links'>
-                    <a href='/#' onClick={()=>onMasterRouteChange('forgotPass')}>Forgot password ?</a>
-                    <a href='/#' onClick={()=>onMasterRouteChange('register')}>New user ?</a>
+                    <a onClick={()=>onMasterRouteChange('forgotPass')}>Forgot password ?</a>
+                    <a onClick={()=>onMasterRouteChange('register')}>New user ?</a>
                 </div>
             </div>
         </div>
