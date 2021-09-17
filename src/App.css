@@ -44,7 +44,7 @@ button:hover{
 button:active{
   transform: rotate(10deg);
 }
-a{
+.normal-link{
     color: #14213d;
     margin-top: 10px;
     font-size: .7rem;
