@@ -5,11 +5,8 @@ module.exports = {
   development: {
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
-    user : 'postgres',
-    password : '5623',
-    database : 'face-detection',
-    charset: 'utf8'
+    connectionString : "postgres://vyexavrnihyasz:1c31e58bff115e4679f4dbdf33f6c9c90cec126a14febb848289f75eff07aee0@ec2-52-23-87-65.compute-1.amazonaws.com:5432/d1s4uoreqf739s",
+    ssl: { rejectUnauthorized: false }
   },
   migrations: {
     directory: __dirname + '/knex/migrations',

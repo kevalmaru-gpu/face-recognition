@@ -33,6 +33,7 @@ app.post('/register',(req,res) => {
   const { username, email, password } = req.body
 
   db.transaction(trx => {
+    // res.json(password)
     trx.insert({
       username:username,
       password:password
@@ -53,7 +54,7 @@ app.post('/register',(req,res) => {
     .then(trx.commit)
     .catch(trx.rollback)
   })
-  .catch(err => res.status(400).json('unable to register'))
+  .catch(err => res.status(400).json(err))
 })
 
 app.listen(process.env.PORT || 200)

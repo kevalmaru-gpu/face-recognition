@@ -57,6 +57,7 @@ class Register extends React.Component{
     }
 
     if (emailField.value.length !== 0 && usernameField.value.length !== 0 && passField.value.length !== 0 && /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailField.value)){
+      console.log(this.state)
       fetch("https://safe-taiga-39517.herokuapp.com/register", {
         method:"post",
         headers:{"Content-Type": "application/json"},
