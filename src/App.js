@@ -7,7 +7,7 @@ import Home from './Pages/Home/Home';
 import Clarifai from 'clarifai'
 
 const app = new Clarifai.App({
-  apiKey: "43c8acfc16d44abd8913ceb2884e0422"
+  apiKey: "aae743fe00c6408ebcb6a7465d07cf2e"
 })
 
 class App extends React.Component{
@@ -21,6 +21,9 @@ class App extends React.Component{
   }
 
   onMasterRouteChange = (route) => {
+    if (route === 'login'){
+      sessionStorage.setItem("isLogedIn","0")
+    }
     this.setState({route:route})
   }
 

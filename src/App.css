@@ -27,6 +27,16 @@
   box-shadow: black inset 2px 2px 2px;
   font-family: 'Montserrat', sans-serif;
 }
+.errorMsg{
+  display: none;
+  margin: 3%;
+  color: darkred;
+  font-size: .2rem;
+}
+.errorMsg.active{
+  font-size: 100%;
+  display: block;
+}
 button{
   border: none;
   outline: none;

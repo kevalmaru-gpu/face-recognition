@@ -3,28 +3,13 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const db = require('./knex/knex.js')
 
-const database = {
-  users:[
-    {
-      username:"kiyaexo123",
-      email:"kiyaexo@gmail.com",
-      password:"12345"
-    },
-    {
-      username:"saddie123",
-      email:"saddie@gmail.com",
-      password:"54321"
-    }
-  ]
-}
-
 const app = express()
 
 app.use(bodyParser.json())
 app.use(cors())
 
 app.get('/',(req,res) => {
-
+  res.json("its working")
 })
 
 app.post('/login',(req,res) => {
