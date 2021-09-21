@@ -71,4 +71,4 @@ app.post('/register',(req,res) => {
   .catch(err => res.status(400).json('unable to register'))
 })
 
-app.listen(200)
+app.listen(process.env.PORT || 200)
