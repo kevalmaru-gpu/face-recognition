@@ -21,6 +21,11 @@ class Register extends React.Component{
   updatePassword = (event) => {
     this.setState({password:event.target.value})
   }
+  onKeyEnter = (e) => {
+    if (e.key === 'Enter'){
+      this.onSubmit()
+    }
+  }
   onSubmit = () => {
     fetch("http://localhost:200/register", {
       method:"post",
@@ -49,9 +54,9 @@ class Register extends React.Component{
             <div className='reg-box box-container'>
                 <div className='title'>REGISTER</div>
                 <div className='field'>
-                    <input type='tex' placeholder='Email' className='input-field' onChange={this.updateEmail}></input>
-                    <input type='tex' placeholder='Username' className='input-field' onChange={this.updateUsername}></input>
-                    <input type='password' placeholder='Password' className='input-field' onChange={this.updatePassword}></input>
+                    <input type='tex' placeholder='Email' className='input-field' onChange={this.updateEmail} onKeyDown={this.onKeyEnter}></input>
+                    <input type='tex' placeholder='Username' className='input-field' onChange={this.updateUsername} onKeyDown={this.onKeyEnter}></input>
+                    <input type='password' placeholder='Password' className='input-field' onChange={this.updatePassword} onKeyDown={this.onKeyEnter}></input>
                 </div>
                 <button className='reg-button' onClick={this.onSubmit}>Register</button>
                 <div className='div-line'></div>

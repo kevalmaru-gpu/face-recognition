@@ -16,6 +16,11 @@ class Login extends React.Component {
   updatePassword = (event) => {
     this.setState({password:event.target.value})
   }
+  onKeySubmit = (e) => {
+    if (e.key === 'Enter'){
+      this.onSubmit()
+    }
+  }
   onSubmit = () => {
     fetch("http://localhost:200/login", {
       method:"post",
@@ -34,7 +39,6 @@ class Login extends React.Component {
         alert(data)
       }
     })
-
   }
 
   render(){
@@ -45,8 +49,8 @@ class Login extends React.Component {
             <div className='login-box box-container'>
                 <h1 className='title'>LOGIN</h1>
                 <div className='field'>
-                    <input id='username' type='tex' placeholder='Username' className='input-field' onChange = {this.updateUsername}></input>
-                    <input id='password' type='password' placeholder='Password' className='input-field' onChange = {this.updatePassword}></input>
+                    <input id='username' type='tex' placeholder='Username' onKeyDown={this.onKeySubmit} className='input-field' onChange = {this.updateUsername}></input>
+                    <input id='password' type='password' placeholder='Password' onKeyDown={this.onKeySubmit} className='input-field' onChange = {this.updatePassword}></input>
                 </div>
                 <button className='login-button' onClick={this.onSubmit}>Login</button>
                 <div className='div-line'></div>
