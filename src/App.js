@@ -67,10 +67,10 @@ class App extends React.Component{
           ?
             <Register onMasterRouteChange={this.onMasterRouteChange}/>
           :
-          this.state.route === 'forgotPass'
-          ?
-            <ForgotPass onMasterRouteChange={this.onMasterRouteChange}/>
-          :
+          // this.state.route === 'forgotPass'
+          // ?
+          //   <ForgotPass onMasterRouteChange={this.onMasterRouteChange}/>
+          // :
           this.state.route === 'home'?
             <Home onMasterRouteChange={this.onMasterRouteChange} onFindButton={this.onFindButton} onImageLinkChange={this.onImageLinkChange} imageLink={this.state.imageLink} box={this.state.box}/>
           :
